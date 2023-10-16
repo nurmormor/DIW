@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 Formulario</title>
+</head>
+<body>
+    <form action="" method="get">
+        <label for="txtNombre">Nombre:</label>
+        <input type="text" name="txtNombre" id="txtNombre" maxlength="20" minlength="2"><br>
+        <label for="txtApellidos">Apellidos:</label>
+        <input type="text" name="txtApellidos" id="txtApellidos" maxlength="20" minlength="2"><br>
+        <fieldset>
+            <legend>Eres mayor de edad?</legend>
+            <div>
+                <input type="radio" id="Sí" name="edad" value="Sí" checked />
+                <label for="sí">Sí</label>
+             </div>
+            
+             <div>
+                <input type="radio" id="No" name="edad" value="No" />
+                <label for="No">No</label>
+             </div>
+        </fieldset>
+        <label for="txtEmail">Email:</label>
+        <input type="email" name="txtEmail" id="txtEmail"><br>
+
+        <fieldset>
+            <legend>Información: </legend>
+            <div>
+                <input type="checkbox" id="Sí" name="edad" value="Sí" checked/>
+                <label for="sí">Deseo recibir información sobre novedades y ofertas</label>
+             </div>
+            
+             <div>
+                <input type="checkbox" id="No" name="edad" value="No" />
+                <label for="No">He leído y acepto las condiciones y la política de protección de datos</label>
+             </div>
+        </fieldset>
+        <input type="submit" id="btnCalcular" value="Enviar"/>
+    </form>
+</body>
+</html>
