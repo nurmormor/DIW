@@ -1,0 +1,22 @@
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+/*
+Ejercicio 2.1b: Usando el resultado del ejemplo 2.1,
+añade varios párrafos a la división con id resultado y haz que los párrafos pares tengan como color de fondo #eee,
+también que cuando el ratón se coloque por encima de cualquier párrafo,
+el texto se ponga en negrita. Finalmente,
+el último párrafo dentro de la división tendrá como tamaño de texto 0.75rem.
+*/
+
+#resultado p:nth-child(even){
+	background-color: #eee;
+}
+p:hover{
+	font-weight: 900;
+}
+
+#resultado p:last-child{
+	font-size: 0.75rem;
+}

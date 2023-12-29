@@ -1,0 +1,33 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+/* Aplicar estilos a todas las filas de la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    
+  }
+  
+  /* Estilo para las filas pares */
+  tr:nth-child(even) {
+    background-color: white;
+  }
+  
+  /* Estilo para las filas impares */
+  tr:nth-child(odd) {
+    background-color: bisque;
+  }
+  
+  /* Estilo para resaltar la fila cuando el ratón está sobre ella */
+  tr:hover {
+    background-color: chocolate;
+  }
+  
+  /* Estilos adicionales para las celdas */
+  td, th {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  

@@ -1,0 +1,21 @@
+*, ::before, ::after {
+	box-sizing: border-box;
+}
+
+input[type=button]{
+    background-color: crimson;
+    color: blanchedalmond;
+    padding: 1rem;
+    min-width: 20ch;
+    border-radius: 10px;
+    border: 2px solid transparent;
+  }
+  input[type=button]:hover {
+    background-color: red;
+    cursor: pointer;
+    border: 2px solid pink;
+  }
+  input[type=button]:active {
+    color: black;
+    background-color: brown;
+  }

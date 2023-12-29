@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+p {
+    color: #336;
+}
+
+.destacado {
+    background-color: bisque;
+}
+
+#resultado {
+    margin: 2rem;
+    border: 1px solid red;
+    
+}
+
+header p {
+    font-size: 1.5rem;
+}
+
+p+p {
+    border-left: 6px solid #336;
+    
+    padding-left: 2px;
+}
+
+.destacado>a {
+    color: red;
+}
+
+
+input:focus-visible{
+	outline: 2px solid #336;
+}
+
+input:valid{
+	background-color: yellowgreen;
+	color:aliceblue
+}
+input:invalid{
+	background-color: deeppink;
+	color:aliceblue
+}
+
+
+div.resultado{
+	border: 1px solid red;
+	background-color: deeppink;
+	padding: 2rem;
+	color: white;
+	border-radius: 5px;;
+}
+
+div.resultado:empty{
+	display:none;
+}
