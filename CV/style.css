@@ -1,102 +1,405 @@
-@import url(https://fonts.googleapis.com/css?family=Girassol:regular);
 
-*,::after::before{
-box-sizing: border-box;
+@import url(https://fonts.googleapis.com/css?family=Inter:regular,700);
+@import url(https://fonts.googleapis.com/css?family=Lexend+Deca:regular);
+
+*,::after,::before{
+  box-sizing: border-box;
 }
 
-/* Reset de estilos básicos para mayor consistencia en navegadores */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+:root {
+  --main-background-color: brown;
+  --header-background-color: #9a6868;
+  --header-text-color: #fff;
+  --nav-link-color: #fff;
+  --nav-link-hover-color: #090606;
+  --nav-link-highlight-color: #0a0707;
+  --hero-background-image: url('fondoHero.jpg');
+  --hero-text-color: #fff;
+  --social-icon-border-color: #000;
+  --social-icon-hover-transform: scale(1.2);
+  --experiencia-background-image: url('rayas.avif');
+  --experiencia-card-background-color: beige;
+  --experiencia-card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --experiencia-card-hover-transform: translateY(-5px);
+  --habilidades-background-image: url('ciudad.jpg');
+  --skills-table-hover-background-color: #e0e0e0;
+  --skills-table-border-color: #ddd;
+  --skills-table-td-border-radius: 10px;
+  --skills-table-td-background-color: #f8f8f8;
+  --circle-background-color: #a38b9a;
+  --skills-table-h3-color: #333;
+  --card-p-color: #603333;
+  --circle-level-5-background-color: black;
+  --educacion-background-image: url('casa.png');
+  --card-background-image: url('estudios.jpg');
+  --card-hover-background-image: none;
+  --footer-background-color: #333;
+  --footer-text-color: #fff;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
-    color: #333;
-    line-height: 1.6;
-    margin: 0;
-    font-family: "Girassol",Arial, Helvetica, sans-serif;
+  font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+  background-color: var(--main-background-color);
+}
+
+body.dark-mode {
+  --main-background-color: #1a1a1a;
+  --header-background-color: #333;
+  --header-text-color: #fff;
+  --nav-link-color: #fff;
+  --nav-link-hover-color: #666;
+  --nav-link-highlight-color: #444;
+
+  --hero-text-color: #fff;
+  --social-icon-border-color: #666;
+  --social-icon-hover-transform: scale(1.2);
+
+  --experiencia-card-background-color: #2c2c2c;
+  --experiencia-card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --experiencia-card-hover-transform: translateY(-5px);
+
+  --skills-table-hover-background-color: #333;
+  --skills-table-border-color: #444;
+  --skills-table-td-border-radius: 10px;
+  --skills-table-td-background-color: #292929;
+  --circle-background-color: #574f61;
+  --skills-table-h3-color: #ccc;
+  --card-p-color: #a08080;
+  --circle-level-5-background-color: #1a1a1a;
+
+  --card-hover-background-image: none;
+  --footer-background-color: #1a1a1a;
+  --footer-text-color: #ccc;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 800px;
-    margin: 0 auto;
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; 
+  top: 0; 
+  z-index: 1;
 }
 
 .logo {
-    font-size: 36px;
-    font-weight: bold;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
 
 nav ul {
-    list-style: none;
-    display: flex;
-}
-
-nav li {
-    margin: 0 20px;
+  list-style-type: none;
+  display: flex;
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
+  text-decoration: none;
+  color: var(--nav-link-color);
+  margin: 0 10px;
+  position: relative; 
+  transition: color 0.3s ease-in-out; 
 }
+
 
 nav a:hover {
-    color: #ff9900;
+  color: var(--nav-link-hover-color); 
 }
 
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+
+nav a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--nav-link-highlight-color); 
+  bottom: -3px; 
+  left: 0;
+  transform: scaleX(0); 
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+  transform: scaleX(1); 
+  transform-origin: bottom left;
+}
+
+
+#hero {
+  background-image: var(--hero-background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px; 
+  text-align: center;
+  color: var(--hero-text-color);
+  height: 30vh; 
+  
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+.social-icon {
+  border: 2px solid var(--social-icon-border-color); 
+  padding: 5px; 
+  border-radius: 5px; 
+  transition: transform 0.3s ease-in-out; 
+}
+
+.social-icon:hover {
+  transform: var(--social-icon-hover-transform);
+}
+
+
+#main-content {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
 }
 
 section {
-    margin-bottom: 40px;
-
+  padding: 0.5px;
+  margin-bottom: 5px;
 }
 
-h1 {
-    font-size: 36px;
-    color: #333;
+
+#sobre-mi {
+  background-color: var(--sobre-mi-background-color, antiquewhite);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+  filter: brightness(70%); 
 }
 
-h2 {
-    font-size: 24px;
-    color: #ff9900;
-    margin-bottom: 10px;
+.sobre-mi-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.proyecto {
-    margin-bottom: 20px;
+.texto-izquierda {
+  text-align: center;
+  flex: 1;
+  max-width: 50%; 
+  color: var(--texto-izquierda-color, #a76060);
 }
 
-.proyecto img {
-    max-width: 100%;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.foto-derecha {
+  flex: 1;
+  max-width: 50%; 
+  text-align: center;
 }
+
+.foto-derecha img {
+  border-radius: 50%; 
+  width: 50%; 
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.foto-derecha img:hover {
+  transform: scale(1.1); 
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
+}
+
+
+#experiencia {
+  text-align: center;
+  background-image: var(--experiencia-background-image);
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center; 
+}
+
+
+.experiencia-card {
+  background-color: var(--experiencia-card-background-color);
+  border-radius: 15px; 
+  box-shadow: var(--experiencia-card-box-shadow);
+  padding: 40px; 
+  width: 300px; 
+  margin: 20px; 
+  opacity: 0.9;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.experiencia-card:hover {
+  transform: var(--experiencia-card-hover-transform);
+}
+
+#habilidades {
+  background-image: var(--habilidades-background-image);
+  padding: 20px;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-column {
+  flex: 1;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.skills-table-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  position: relative;
+  perspective: 1000px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  
+}
+
+.skills-table td:hover {
+  background-color: var(--skills-table-hover-background-color);
+  transition: background-color 0.3s;
+  transform: rotateY(180deg);
+}
+
+.skills-table td {
+  padding: 10px;
+  border: 1px solid var(--skills-table-border-color);
+  background-color: var(--skills-table-td-background-color);
+  border: none;
+  border-radius:var(--skills-table-td-border-radius);
+  transition: transform 0.5s;
+  cursor: pointer;
+  
+}
+
+
+.skills-table h3 {
+  color: var(--skills-table-h3-color);
+  margin-bottom: 10px;
+}
+
+.skill-circles {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--circle-background-color);
+  margin-right: 5px;
+}
+
+/* Estilo específicos para círculos coloreados */
+.circle[data-level="5"] {
+  background: var(--circle-level-5-background-color);
+}
+
+.skills-title {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+
+#habilidades:hover .skills-title,
+#habilidades:focus .skills-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#educacion {
+  background-image: url('casa.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+}
+
+.educacion-container {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end; 
+}
+
+
+.card {
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: auto; 
+  overflow: hidden;
+  transition: width 0.5s, background-image 0.5s;
+  background-image: url('estudios.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:nth-child(3) {
+  background-image: url('idiomas.jpg');
+}
+
+.card p {
+  margin: 10px 0;
+  color: var(--card-p-color);
+  opacity: 0;
+  transition: opacity 0.5s;
+  text-align: center;
+  margin-top: auto;
+}
+
+.card:hover {
+  width: 300px;
+  background-image: var(--card-hover-background-image); 
+}
+
+.card:hover p {
+  opacity: 1;
+}
+
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    font-size: 16px;
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 10px;
 }
+
