@@ -4,7 +4,7 @@
 
 /* Aplicar estilos a todas las filas de la tabla */
 table {
-    border-collapse: collapse;
+    border-collapse: collapse; /*esto hace que todas las celdas de la tabla esten pegaditas y no haya huecos*/
     width: 100%;
     
   }

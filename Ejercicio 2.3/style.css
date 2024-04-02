@@ -2,6 +2,8 @@
 
 @import url(https://fonts.googleapis.com/css?family=Inclusive+Sans:regular,italic);
 
+
+
 *,::before,::after{
 	box-sizing: border-box;
 }
@@ -34,11 +36,11 @@ header, footer{
 main{
 	padding: 1rem;
 	max-width: 60ch;
-	margin: 0 auto;
+	margin: 0 auto; /*el auto centra, preguntar*/
 }
 
 
-h1{
+h1{ /*este es el encabezado del header*/
 	font-family: 'Onest',Arial, Helvetica, sans-serif;
 	margin: 0;
 	font-weight: 100;
@@ -50,7 +52,7 @@ h1{
 	margin-right: 2rem;
 	background-color: var(--colorAzulMedio);
 	color: var(--colorAzulClaro);
-	padding: 0.5rem;
+	padding: 0.5rem; /*separacion del recuadro respecto al texto*/
 	border-radius: var(--radio);
 }
 
@@ -70,10 +72,10 @@ form{
 }
 
 label{
-	display: block;
-		color: var(--colorAzulOscuro);
+	display: block; /*no sé lo que hace*/
+	color: var(--colorAzulOscuro);
 	font-size: 1rem;
-	border-top-right-radius: 5px;
+	border-top-right-radius: 5px; /*no sé lo que hace*/
 	
 }
 
@@ -82,7 +84,7 @@ input{
 	display: block;
 	width: 20ch;
 	border: 2px solid var(--colorAzulOscuro);
-	margin-bottom: 0.5rem;
+	margin-bottom: 0.5rem; /*margen respecto al boton de accion*/
 }
 
 button{
@@ -96,7 +98,7 @@ button{
 }
 
 input:focus-visible{
-	outline: 0px solid transparent;
+	outline: 0px solid transparent; /* se utiliza para eliminar el contorno predeterminado que aparece al enfocar un elemento. En este caso, establece el contorno a un borde sólido transparente con un ancho de 0 píxeles, lo que básicamente lo hace invisible. */
 	background-color: var(--colorGrisClaro);
 }
 

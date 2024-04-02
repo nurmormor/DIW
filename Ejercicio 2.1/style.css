@@ -24,6 +24,7 @@ header p {
 
 p+p {
     border-left: 6px solid #336;
+	border-right: 6px solid #336; /* era para probar */
     
     padding-left: 2px;
 }
@@ -39,7 +40,7 @@ input:focus-visible{
 
 input:valid{
 	background-color: yellowgreen;
-	color:aliceblue
+	color:aliceblue 
 }
 input:invalid{
 	background-color: deeppink;
@@ -55,6 +56,6 @@ div.resultado{
 	border-radius: 5px;;
 }
 
-div.resultado:empty{
+div.resultado:empty{ /*si no hay nada, no se mostrará nada*/
 	display:none;
 }
