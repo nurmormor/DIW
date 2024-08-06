@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-projects.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <script defer src="code.js"></script>
+  <title>Mis Proyectos</title>
+</head>
+<body class="body-proyectos">
+  <header>
+    <img src="imágenes/favicon.png" alt="logo nuria"><div class="logo">Nuria Moreno Morales</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><button onclick="toggleDarkMode()" id="darkModeButton">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+            <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round" style="display: none;">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+          </svg>
+        </button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="proyectos">
+    <h2>Mis Proyectos</h2>
+    <div class="card-container">
+      <div class="card1 calculator">
+        <div class="card-content">
+          <div class="card-image" style="background-image: url('imágenes/calculadora.jpg');"></div>
+          <div class="card-text">
+            <p>Calculadora en Java</p>
+          </div>
+        </div>
+      </div>
+      <div class="card1 tres-en-raya">
+        <div class="card-content">
+          <div class="card-image" style="background-image: url('imágenes/3enraya.jpg');"></div>
+          <div class="card-text">
+            <p>3 en raya en JavaScript</p>
+          </div>
+        </div>
+      </div>
+      <div class="card1 sql">
+        <div class="card-content">
+          <div class="card-image" style="background-image: url('imágenes/Task.jpg');"></div>
+          <div class="card-text">
+            <p>Creación de tablas en SQL</p>
+          </div>
+        </div>
+      </div>
+      <div class="card1 carrera">
+        <div class="card-content">
+          <div class="card-image" style="background-image: url('imágenes/Carrera.jpg');"></div>
+          <div class="card-text">
+            <p>Proyecto CSS para la creación de una carrera de coches animada</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Mis Proyectos</p>
+  </footer>
+</body>
+</html>

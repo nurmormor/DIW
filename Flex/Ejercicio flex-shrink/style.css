@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+body { color: #333; }
+h1 {  margin: 0; font-size: 3rem; }
+p {  margin-top: 0.6rem; }
+.container { height: 100vh; }
+#learn { background-color: #FED7AA;}
+#teach { background-color: #BAE6FD; }
+a {
+  display: inline-block;
+  margin-top: 1.2rem;
+  background-color: white;
+  text-decoration: none;
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 5px;
+}
+
+/* Esto es para centrar el contenido en cada .split */
+.split {
+  display: flex; /*hace display:flex aqui tambien para que el contenido de dentro de los splits tambien este flex*/
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Empieza flex */
+
+.container {  display: flex; }
+
+.split { flex-basis: 50%; }
+
+@media screen and (max-width: 767px) {
+  .container {
+	flex-direction: column;
+  }
+}

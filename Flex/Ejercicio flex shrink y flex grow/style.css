@@ -1,0 +1,141 @@
+header {
+    background-color: brown;
+    color: bisque;
+    width: 100%;
+    padding: 1rem;
+}
+
+body {
+    flex-direction: column;
+    margin: 0;
+    display: flex;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.cita {
+    background-color: bisque;
+    display: flex;
+    margin: 0.5rem;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    flex-grow: 0;
+
+}
+
+.cita span {
+    background-color: brown;
+    border-radius: 50px;
+    padding: 0.5rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+main {
+    padding: 8px;
+}
+
+form {
+    background-color: bisque;
+    padding: 1rem;
+    max-width: 40ch;
+    margin: 0 auto;
+}
+
+fieldset,
+legend {
+    border: brown 1.5px solid;
+
+}
+
+fieldset>div {
+    display: flex;
+    padding: 0.2rem;
+    justify-content: space-evenly;
+}
+
+label {
+    background-color: brown;
+    color: white;
+    padding: 0.2rem;
+    padding-inline: 1rem;
+}
+
+input[type=text] {
+    flex-grow: 1;
+}
+
+.botonera {
+    gap: 5px;
+
+}
+
+button {
+    background-color: brown;
+    color: white;
+    border-style: none;
+    flex-grow: 1;
+    /*esto hace que los botones me ocupen todo el espacio */
+}
+
+button:hover {
+    filter: brightness(1.2);
+    flex-grow: 2.5;
+    transition: flex-grow 2s;
+    cursor: pointer;
+}
+
+.imagen {
+    display: flex;
+    background-color: bisque;
+    margin: 8rem;
+    gap: 2rem;
+    align-items: center;
+
+}
+
+.imagen>img {
+    padding: 1rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    width: 5rem;
+    height: 5rem;
+
+}
+
+.imagen>div {
+    padding: 1rem;
+}
+
+.imagen > p {
+    text-align: justify;
+}
+
+.galeria {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap:2rem;
+    flex-grow: 1;
+}
+
+.galeria img {
+    width: 20rem;
+    height: 20rem;
+    flex: 300px;
+}
+
+footer {
+    background-color: bisque;
+    color: black;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}

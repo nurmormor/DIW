@@ -1,0 +1,33 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+button {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    position: relative;
+    z-index: 0;
+    padding-inline: 1rem;
+    padding-block: 0.5rem;
+    font-size: 1rem;
+    font-variant: small-caps;
+    cursor: pointer;
+    background-color: #efefef;
+
+}
+
+button::before{
+    content: ""; /*esto es obligatorio en el content*/
+    position: absolute;
+    inset: 0; /*equivalente a top-right,top-left etc*/
+    z-index: -1; /*para que no se superponga al texto*/
+    clip-path: circle(0% at 0 50%); 
+    transition: clip-path 500ms ease;
+}
+
+button:hover::before {
+    clip-path:circle(100% at 0 50%);
+    background-color: #39c;
+}

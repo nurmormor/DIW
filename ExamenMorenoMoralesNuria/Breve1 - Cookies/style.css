@@ -1,0 +1,48 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 5rem;
+  max-width: 100ch;
+}
+
+button {
+  padding: 0.5rem;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+  background-color: blue;
+}
+
+button.btn-aceptar {
+  margin-top: 0.5rem;
+
+}
+
+button.btn-rechazar {
+
+  background-color: transparent;
+  /* quita el cuadro azul */
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+.cookiealert {
+  background-color: #cacafa;
+  border-radius: 5px;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 1rem;
+  gap: 30px;
+  
+}

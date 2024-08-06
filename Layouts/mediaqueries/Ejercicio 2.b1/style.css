@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Gabarito:regular,500,600,700,800,900);
+
+*,::after,::before{
+	box-sizing: border-box;
+}
+
+body{
+	font-family: 'Gabarito',Arial, Helvetica, sans-serif;
+}
+
+h1{
+	background-color: brown;
+	color:white;
+	font-size: 2rem;
+	padding: 0.25rem;
+	text-align: left; /*preguntar*/
+}
+
+label, input, button{
+	display:block;
+	width: 100%;
+	margin-bottom: 1rem;
+}
+form{
+	background-color: bisque; /*preguntar*/
+	padding: 1rem;
+}
+
+@media screen and (min-width:500px) {
+	h1{
+		background-color: navy;
+		text-align: center;
+		font-size: 4rem;
+	}
+	form {
+		background-color: aliceblue;
+		max-width: 60ch;
+		margin:0 auto; /*hace que este centrado*/
+	}
+	input,button{
+		width:25ch;
+	}
+}

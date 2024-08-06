@@ -1,0 +1,98 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+*,::after,::before{
+  box-sizing: border-box;
+}
+
+body{
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+    background-color: palegreen;
+    margin: 50px;
+    display: grid;
+    place-items: center; 
+    /*estas dos ultimas propiedades es para que los 3 primeros titulos se traten como 3 bloques de contenido y asi poder centrarlo*/
+}
+
+div > div{
+    background-color: white;
+    border-radius: 8px;
+    height: 15em;
+    padding: 18px;
+    position: relative; /*esto es para que la position de las imagenes coja al padre (div) como relativo*/
+}
+
+div > p {
+
+color: hsl(229, 6%, 66%);
+font-size: 0.7em;
+}
+
+img{
+position: absolute;
+bottom: 10px;
+right: 10px;
+
+}
+
+h1{
+text-align: center;
+font-weight: 200; /*quitar la negrita*/
+}
+
+h2{
+text-align: center;
+font-weight: 600;
+font-size: 2em;
+margin-top: -25px;
+}
+
+body > p{
+text-align: center;
+color: hsl(229, 6%, 66%);
+}
+
+.cards{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr ;
+grid-template-rows: 1fr 1 fr 1 fr 1fr;
+grid-template-areas: /*los puntos indican las columnas y las filas*/
+". tm ."
+"supervisor tm calculator"
+"supervisor karma calculator"
+". karma .";
+gap: 10px 10px; /*hueco vertical y horizontal, por eso se ponen dos valores*/
+width: 90%;
+margin: 0 auto; /*para centrar*/
+/*tambien para centrar puedo usar el align-item y el justify-content*/
+}
+
+.tm{
+grid-area: tm;
+border-top: 3px solid hsl(0, 78%, 62%); /*esto es la rallita de color de cada card*/
+}
+
+.karma{
+    grid-area: karma;
+    border-top: 3px solid hsl(34, 97%, 64%);
+}
+
+.supervisor{
+    grid-area: supervisor;
+    border-top: 3px solid hsl(180, 62%, 55%);
+}
+
+.calculator{
+    grid-area: calculator;
+    border-top: 3px solid hsl(212, 86%, 64%);
+}
+
+@media screen and (width<=375px) {
+
+.cards{
+display: flex;
+flex-direction: column;
+}
+
+}

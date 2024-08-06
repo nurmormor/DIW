@@ -1,0 +1,25 @@
+*,::before,::after{
+	box-sizing: border-box;
+}
+body{
+background-color: #333;
+
+}
+
+h1{
+color: blue;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 6rem;
+font-weight: 1000;
+
+background: linear-gradient(red, blue);
+background-clip: text;
+color: transparent;
+}
+
+h1:hover{
+
+    background: linear-gradient(white, rgb(223, 55, 83));
+    background-clip: text;
+    color: transparent;
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio de clase </title>
+
+    <!--Consiste en crear un formulario que tenga las siguientes características:
+- El procesamiento de datos del formulario se tiene que hacer junto al envío, y
+no se debe enviar a ningún sitio. Además, todos los parámetros que se piden
+a continuación tienen que estar dentro de un grupo de campo cuyo título sea:
+“Festival de Eurovisión” (0,5 p)
+- Una entrada en la que justamente al lado izquierdo ponga “Lugar de
+residencia” . Tiene que tener dentro texto DEFINITIVO que ponga: “España”.
+Esta entrada tiene que ser únicamente de lectura de datos (0,25 p)
+- Una entrada tipo texto en la que justamente al lado izquierdo ponga
+“Participante favorito: ” . Tiene que tener dentro texto provisional que ponga:
+“Indique país favorito”. La máxima longitud del texto tiene que ser de 25
+caracteres. (0,125 p)
+- Una entrada tipo fecha en la que justamente al lado izquierdo ponga “Indiqué
+desde cuando ve Eurovisión”. No se puede poner fechas posteriores al 13 de
+abril de 2023 ni anteriores al 24 de mayo de 1956. Es obligatorio rellenar este
+dato para mandar el formulario. (0,625 p)
+- Un menú desplegable en el que justamente en el lado izquierdo ponga:
+“Indiqué cuál es su país favorito del Big Five”. Las opciones del menú
+desplegable son:
+- Alemania
+- Francia
+- Reino Unido
+- España
+- Italia
+Además, se tienen que ver todas las opciones, la opción España no se puede
+marcar, por defecto estará seleccionado Italia y es obligatorio rellenar este
+dato para mandar el formulario. (0,5 p)
+- Un texto que ponga “¿En qué año se presentó Channel a Eurovisión?” y
+justamente debajo tres opciones circulares seleccionables que sean: “2021”,
+“2022” y “2023”. (0,375 p)
+- Un texto que ponga “¿Te gustó su actuación?” y justamente debajo una
+casilla de confirmación (0,125 p)
+- Una entrada tipo texto en la que justamente al lado izquierdo ponga “¿Cómo
+se llamaba la canción de Channel”. Tiene que tener dentro texto provisional
+que ponga: “Escriba la canción en mayúsculas”con una máxima longitud de
+25 caracteres y que todos los caracteres se escriban en mayúsculas. (0,5 p)
+- Una entrada en la que justamente al lado izquierdo ponga “Primera edición
+de Eurovisión” . Tiene que tener dentro texto provisional que ponga: “Escriba
+el año”. Tienen que ser 4 dígitos exactamente. (0,5 p)
+- Una entrada tipo texto en la que justamente al lado izquierdo ponga “¿Quién
+es el último ganador de Eurovisión?” . Tiene que tener dentro texto
+provisional que ponga: “Escriba el país”. La máxima longitud del texto tiene
+que ser de 25 caracteres. (0,125 p)
+- Una entrada en la que justamente al lado izquierdo ponga “¿Quién crees que
+deberías haber ganado?:”. Tiene que tener dentro texto provisional que
+ponga: “Escribe el sufijo del país”. Al escribir, el texto tiene que aparecer
+encriptado. Tienen que ser 3 carácteres alfanuméricos exactamente . (0,625
+p)
+- Un botón de envío que ponga “Enviar” y un botón de borrado que ponga
+“Volver a empezar” (0,25 p)
+-->
+</head>
+
+<body>
+    <form action="">
+        <fieldset>
+            <legend>Festival de Eurovisión</legend>
+
+            <label for="residencia">Lugar de Residencia: </label>
+            <input type="text" name="residencia" id="residencia" value="ESPAÑA" readonly><br>
+            <label for="favorito">Participante favorito:</label>
+            <input type="text" name="favrito" id="favorito" placeholder="Indique país favorito:" maxlength="25ch"><br>
+            <label for="fecha">Indique desde cuándo ve Eurovisión:</label>
+            <input type="date" name="fecha" id="fecha" min="1956-05-24" max="2023-04-13" required><br>
+            <label for="pais">Indique cuál es su país favorito del Big Five:</label>
+            <select name="pais" id="pais" required size="5">
+                <option value="Alemania">Alemania</option>
+                <option value="Francia">Francia</option>
+                <option value="Reino Unido">Reino Unido</option>
+                <option value="España" disabled>España</option>
+                <option value="Italia" selected>Italia</option>
+            </select><br>
+
+            <label for="channel">¿En qué año se presentó Channel a Eurovisión?</label><br>
+            <input type="radio" id="2021" name="channel" value="2021">
+            <label for="2021">2021</label><br>
+            <input type="radio" id="2022" name="channel" value="2022">
+            <label for="2022">2022</label><br>
+            <input type="radio" id="2023" name="channel" value="2023">
+            <label for="2023">2023</label><br>
+
+            <label for="actuacion">¿Te gustó su actuación?</label><br>
+            <input type="checkbox" id="actuacion" name="actuacion" value="sí"><br>
+
+            <label for="cancion">¿Cómo se llamaba la canción de Channel?</label>
+            <input type="text" name="cancion" id="cancion" placeholder="Escriba la canción en mayúsculas" maxlength="25ch" size="30ch" pattern="[A-Z]+"> <br>
+            
+            <label for="edicion">Primera edicion de Eurovisión</label>
+            <input type="text" name="edicion" id="edicion" placeholder="Escriba el año" pattern="[0-9]{4}"><br>
+
+            <label for="ganador">¿Quién es el último ganador de Eurovisión?</label>
+            <input type="text" name="ganador" id="ganador" placeholder="Escriba el país" maxlength="25ch"><br>
+
+            <label for="deberia">¿Quién crees que debería haber ganado?</label>
+            <input type="password" name="deberia" id="deberia" placeholder="Escribe el sufijo del país" maxlength="3ch"><br>
+
+            <input type="button" name="enviar" id="enviar" value="Enviar">
+            <input type="reset" name="empezarde0" id="empezarde0" value="Volver a empezar">
+
+
+
+        </fieldset>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fork-awesome/1.2.0/css/fork-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+body {
+  background-color: #5fdfc4;
+  color: #444;
+  font-family: roboto, arial, sans-serif;
+}
+
+.container {
+  width: 250px;
+  background-color: white;
+  padding: 0.2rem 0.5rem;
+  margin: 5rem auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contador {
+  padding: 0.5rem;
+  background-color: #d6f8e6;
+  color: darkorange;
+  border-radius: 5px;
+
+}
+.texto{
+flex-grow: 1; /*esto hace que el espacio de notificaciones sea lo mas grande posible y por defecto el texto estará a la izquierda*/
+
+}
+
+i{
+  margin: 2px;
+}
