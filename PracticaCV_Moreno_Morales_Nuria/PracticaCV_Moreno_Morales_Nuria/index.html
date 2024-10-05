@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <script defer src="code.js"></script>
+  <title>Mi Currículum</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img class="logo" src="images/logo_nuria.png" alt="logo nuria">
+      <ul class="barraNavegacion" id="barraNavegacion"> <!-- esto tambien era para lo del menu hamburguesa -->
+        <li><a href="#sobre-mi">Sobre Mí</a></li>
+        <li><a href="#experiencia">Experiencia</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="projects.html">Proyectos</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+
+      </ul>
+      <button class="botonModoOscuro" onclick="toggleDarkMode()" id="darkModeButton">
+      
+        <!-- Icono del modo claro -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24"
+          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+          <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+        </svg>
+
+        <!-- Icono del modo oscuro (inicialmente oculto) -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24"
+          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round" style="display: none;">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+        </svg>
+      </button>
+      <!-- Botón del menú hamburguesa -->
+
+     <button class="hamburger-menu" >
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-menu" width="32" height="32"
+          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <line x1="4" y1="6" x2="20" y2="6" />
+          <line x1="4" y1="12" x2="20" y2="12" />
+          <line x1="4" y1="18" x2="20" y2="18" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <section id="hero">
+    <div class="hero-content">
+      <h1 class="nombre">Nuria Moreno Morales</h1>
+      <h2>Desarrolladora de aplicaciones Web</h2>
+
+      <!-- Iconos de redes sociales con enlaces -->
+      <div class="social-icons">
+        <a href="https://www.linkedin.com" target="_blank" class="social-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-linkedin" width="24"
+            height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z" />
+            <path d="M8 11l0 5" />
+            <path d="M8 8l0 .01" />
+            <path d="M12 16l0 -5" />
+            <path d="M16 16v-3a2 2 0 0 0 -4 0" />
+          </svg>
+        </a>
+        <a href="https://www.twitter.com" target="_blank" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-6 h-6 text-gray-800 dark:text-white" >
+            <path clip-rule="evenodd"d="M22 5.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.343 8.343 0 0 1-2.605.981A4.13 4.13 0 0 0 15.85 4a4.068 4.068 0 0 0-4.1 4.038c0 .31.035.618.105.919A11.705 11.705 0 0 1 3.4 4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 6.1 13.635a4.192 4.192 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 2 18.184 11.732 11.732 0 0 0 8.291 20 11.502 11.502 0 0 0 19.964 8.5c0-.177 0-.349-.012-.523A8.143 8.143 0 0 0 22 5.892Z" 
+            fill-rule="evenodd">
+        </path>
+          </svg>
+        </a>
+        <a href="https://www.github.com" target="_blank" class="social-icon">
+          <svg viewBox="0 0 24 24" fill="currentColor" height="24" width="24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="w-6 h-6 text-gray-800 dark:text-white">
+            <path
+              clip-rule="evenodd"
+              d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+              fill-rule="evenodd">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="main-content">
+    <section id="sobre-mi">
+      <div class="sobre-mi-container">
+        <div class="texto-izquierda">
+          <h1>Mi Historia</h1>
+          <p>Entusiasta principiante en desarrollo de aplicaciones web, <em>ansiosa por aprender</em> y experimentar con
+            tecnologías como HTML, CSS y JavaScript para construir sus primeros proyectos digitales.</p>
+        </div>
+        <div class="foto-derecha">
+          <img src="images/images.jpg" alt="Mi Foto" />
+        </div>
+      </div>
+    </section>
+
+    <section id="experiencia">
+      <h2>Experiencia Laboral</h2>
+      <table>
+        <tr>
+          <td>
+            <div class="experiencia-card">
+              <h1>Camarera/Cocinera</h1>
+              <p>Restaurante El Cine - 8 años</p>
+              <p>Responsable de barra</p>
+              <p>Camarera de sala</p>
+              <p>Ayudante de cocina</p>
+            </div>
+          </td>
+          <td>
+            <div class="experiencia-card">
+
+              <h1>Recepcionista de hotel</h1>
+
+              <p> Hotel La Casa Pirula (Écija) - 1 año</p>
+
+              <p>Jefa de recepción</p>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div class="experiencia-card">
+              <h1>Monitora de Granja Escuela</h1>
+              <p>Las Juncias - 1 año</p>
+              <p>Monitora de tiempo libre</p>
+              <p>Monitora de niños con necesidades especiales</p>
+            </div>
+          </td>
+          <td>
+            <div class="experiencia-card">
+              <h1>Profesora de clases particulares</h1>
+              <p>A domicilio</p>
+              <p>Todas las asignaturas de primaria</p>
+              <p>Inglés, francés, lengua castellana - E.S.O.</p>
+              <p>Inglés - Bachillerato</p>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+
+    <section id="habilidades" tabindex="0">
+      <h2 class="skills-title">Habilidades</h2>
+      <div class="skills-container">
+        <div class="skills-column">
+          <div class="skills-table-container">
+            <h3 class="skills-title">Hard Skills</h3>
+            <table class="skills-table">
+              <tr>
+                <td class="skill">Java</td>
+                <td class="skill-circles">
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+                </td>
+              </tr>
+            </table>
+
+            <table class="skills-table">
+              <tr>
+                <td class="skill">HTML</td>
+                <td class="skill-circles">
+
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+
+                </td>
+              </tr>
+
+            </table>
+            <table class="skills-table">
+              <tr>
+                <td class="skill">JavaScript</td>
+                <td class="skill-circles">
+
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+
+                </td>
+              </tr>
+
+            </table>
+            <table class="skills-table">
+              <tr>
+                <td class="skill">SQL</td>
+                <td class="skill-circles">
+
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="skills-column">
+          <div class="skills-table-container">
+            <h3 class="skills-title">Soft Skills</h3>
+
+            <table class="skills-table">
+              <tr>
+                <td class="skill">Adaptación</td>
+                <td class="skill-circles">
+
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+
+                </td>
+              </tr>
+            </table>
+            <table class="skills-table">
+              <tr>
+                <td class="skill">Comunicación</td>
+                <td class="skill-circles">
+
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle"></div> <!-- Sin colorear -->
+                  <div class="circle"></div> <!-- Sin colorear -->
+
+                </td>
+              </tr>
+            </table>
+            <table class="skills-table">
+              <tr>
+                <td class="skill">Empatía</td>
+                <td class="skill-circles">
+
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle"></div> <!-- Sin colorear -->
+
+                </td>
+              </tr>
+            </table>
+            <table class="skills-table">
+              <tr>
+                <td class="skill">Integridad</td>
+                <td class="skill-circles">
+
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle" data-level="5"></div>
+                  <div class="circle"></div> <!-- Sin colorear -->
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="educacion">
+      <div class="educacion-container">
+        <div class="educacion-titulo">
+          <h2>Educación</h2>
+        </div>
+        <div class="card">
+          <p>E.S.O. - I.E.S. Los Alcores (Mairena del Alcor)</p>
+          <p>Bachillerato - I.E.S. Los Alcores (Mairena del Alcor)</p>
+          <p>Grado Traducción e Interpretación (hasta el tercer curso) - Universidad Pablo de Olavide</p>
+        </div>
+        <div class="card">
+          <p>Inglés - C1</p>
+          <p>Francés - B1</p>
+          <p>Alemán - B1</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2024 Mi Currículum</p>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+      </ul>
+    </footer>
+</body>
+
+</html>

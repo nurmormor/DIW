@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style-contacto.css">
+  <script defer src="code.js"></script>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <title>Contacto</title>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <img class="logo" src="images/logo_nuria.png" alt="logo nuria">
+
+      <a href="index.html">Inicio</a>
+      <button class="botonModoOscuro" onclick="toggleDarkMode()" id="darkModeButton">
+        <!-- Icono del modo claro -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24"
+          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 12m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+          <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+        </svg>
+
+        <!-- Icono del modo oscuro (inicialmente oculto) -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24"
+          viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round"
+          stroke-linejoin="round" style="display: none;">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+        </svg>
+
+      </button>
+    </nav>
+  </header>
+
+  <section id="contacto">
+    <h2>Contacta conmigo</h2>
+
+    <!-- Formulario de contacto -->
+    <form action="" method="post" id="contactForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="apellidos">Apellidos:</label>
+      <input type="text" id="apellidos" name="apellidos" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="telefono">Número de teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="motivo">Motivo de contacto:</label>
+      <select id="motivo" name="motivo" required>
+        <option value="contratar">Quiero contratar sus servicios</option>
+        <option value="trabajar-juntos">Me gustaría que trabajáramos juntos</option>
+        <option value="info-sin-compromiso">Me gustaría recibir información sin compromiso</option>
+      </select>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Contacto</p>
+  </footer>
+</body>
+
+</html>

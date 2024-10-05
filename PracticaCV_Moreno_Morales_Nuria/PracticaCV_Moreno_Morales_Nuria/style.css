@@ -1,0 +1,767 @@
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap);
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+:root {
+  --main-background-color: brown;
+  --header-background-color: #9a6868;
+  --header-text-color: #fff;
+  --nav-link-color: #fff;
+  --nav-link-hover-color: #090606;
+  --nav-link-highlight-color: #0a0707;
+  --hero-background-image: url('images/fondoHero.jpeg');
+  --hero-text-color: #433636;
+  --hero-background-text-color: rgba(165, 42, 42, 0.48);
+  --linkedin-icon-color: #0077B5;
+  --twitter-icon-color: #08a0e9;
+  --github-icon-color: #6c15ed;
+  --social-icon-hover-transform: scale(1.2);
+  --experiencia-background-image: url('images/rayas.avif');
+  --experiencia-card-background-color: beige;
+  --experiencia-card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --experiencia-card-hover-transform: translateY(-5px);
+  --habilidades-background-image: url('images/ciudad.jpg');
+  --skills-table-hover-background-color: #e0e0e0;
+  --skills-table-border-color: #ddd;
+  --skills-table-td-border-radius: 10px;
+  --skills-table-td-background-color: #f8f8f8;
+  --circle-background-color: #a38b9a;
+  --skills-table-h3-color: #333;
+  --card-p-color: #603333;
+  --circle-level-5-background-color: black;
+  --educacion-background-image: url('images/casa.png');
+  --card-background-image: url('images/estudios.jpg');
+  --card-hover-background-image: none;
+  --footer-background-color: #333;
+  --footer-text-color: #fff;
+  --hero-background-image-dark: url('images/heroOscuro.jpeg');
+  --experiencia-background-image-dark: url('images/experienciaDark.png');
+  --habilidades-background-image-dark: url('images/habilidadesDark.png');
+  --educacion-background-image-dark: url('images/educacionDark.png');
+  --sobremi-background-image-dark: url('images/imageDark.png');
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  min-height: 100vh;
+  background-color: var(--main-background-color);
+}
+
+
+
+body.dark-mode {
+  --main-background-color: #1a1a1a;
+  --header-background-color: #777070;
+  --header-text-color: #fff;
+  --nav-link-color: #fff;
+  --nav-link-hover-color: #666;
+  --nav-link-highlight-color: #444;
+
+  --hero-text-color: #433636;
+  --social-icon-border-color: #666;
+  --social-icon-hover-transform: scale(1.2);
+
+  --experiencia-card-background-color: #664f62;
+  --experiencia-card-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  --experiencia-card-hover-transform: translateY(-5px);
+
+  --skills-table-hover-background-color: #333;
+  --skills-table-border-color: #444;
+  --skills-table-td-border-radius: 10px;
+  --skills-table-td-background-color: #968f8f;
+  --circle-background-color: #574f61;
+  --skills-table-h3-color: #ccc;
+  --card-p-color: #a08080;
+  --circle-level-5-background-color: #1a1a1a;
+
+  --card-hover-background-image: none;
+  --footer-background-color: #1a1a1a;
+  --footer-text-color: #ccc;
+}
+
+body.dark-mode #hero {
+  background-image: var(--hero-background-image-dark);
+}
+
+body.dark-mode .hero-content {
+  padding-bottom: 25px;
+  width: 100%;
+  height: auto;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0.532);
+}
+
+
+body.dark-mode #sobre-mi {
+  background-color: #e5a3c0;
+  filter: brightness(50%);
+  color: white;
+}
+
+body.dark-mode #experiencia {
+  background-image: var(--experiencia-background-image-dark);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+}
+
+body.dark-mode #habilidades {
+  background-image: var(--habilidades-background-image-dark);
+}
+
+body.dark-mode #educacion {
+  background-image: var(--educacion-background-image-dark);
+}
+
+
+
+.nombre {
+  font-size: 4rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Oswald", sans-serif;
+}
+
+header {
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  backdrop-filter: blur(5px);
+  animation: adjust-header linear both;
+  animation-timeline: scroll();
+  animation-range: 0 100px;
+}
+
+@keyframes adjust-header {
+  to {
+    background: rgba(0, 0, 0, .3);
+    font-size: 16px;
+    height: 60px;
+    border-radius: 0;
+  }
+}
+
+
+.logo {
+  max-width: 12%;
+  max-height: 12%;
+  margin-top: 10px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+  margin: 0 10px;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: var(--nav-link-hover-color);
+}
+
+nav a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: var(--nav-link-highlight-color);
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav a:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.botonModoOscuro {
+  background-color: transparent;
+  border: transparent;
+  margin-right: 40px;
+  color: var(--header-text-color);
+}
+
+#hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: var(--hero-background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: var(--hero-text-color);
+  height: 100vh;
+
+}
+
+.hero-content {
+  padding-bottom: 25px;
+  width: 100%;
+  height: auto;
+  background-color: var(--hero-background-text-color);
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  /* Centra los iconos horizontalmente */
+  align-items: center;
+  /* Centra los iconos verticalmente */
+  margin-top: 1.5rem;
+}
+
+.social-icons a {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border-radius: 15px;
+  border: none;
+  background: linear-gradient(120deg, #833ab4, #fd1d1d, #fcb045);
+  position: relative;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  /* Espacio entre los iconos */
+  transition: 0.1s;
+}
+
+.social-icons a svg {
+  color: white;
+  width: 30px;
+  height: 30px;
+  z-index: 9;
+}
+
+/* Estilos específicos para cada botón basado en el orden */
+.social-icons a:nth-child(1) {
+  background: var(--linkedin-icon-color);
+}
+
+.social-icons a:nth-child(2) {
+  background: var(--twitter-icon-color);
+}
+
+.social-icons a:nth-child(3) {
+  background: var(--github-icon-color);
+}
+
+
+.social-icons a:active {
+  transform: scale(0.85);
+}
+
+.social-icons a::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: #212121;
+  border-radius: 15px;
+  z-index: -1;
+  border: 0px solid rgba(255, 255, 255, 0.411);
+  transition: 0.4s;
+}
+
+.social-icons a:hover::before {
+  width: 0px;
+  height: 0px;
+}
+
+#main-content {
+  display: grid;
+  grid-template-rows: repeat(4, auto);
+}
+
+section {
+  padding: 0.5px;
+  margin-bottom: 5px;
+}
+
+
+#sobre-mi {
+  background-color: var(--sobre-mi-background-color, antiquewhite);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+
+}
+
+.sobre-mi-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.texto-izquierda {
+  text-align: center;
+  font-size: 20px;
+  max-width: 50%;
+  color: var(--texto-izquierda-color, #a76060);
+}
+
+
+.foto-derecha img {
+  border-radius: 100%;
+  width: 70%;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.foto-derecha img:hover {
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+#experiencia {
+  text-align: center;
+  background-image: var(--experiencia-background-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+}
+
+
+.experiencia-card {
+  background-color: var(--experiencia-card-background-color);
+  border-radius: 15px;
+  box-shadow: var(--experiencia-card-box-shadow);
+  padding: 40px;
+  width: 300px;
+  margin: 20px;
+  opacity: 0.9;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.experiencia-card:hover {
+  transform: var(--experiencia-card-hover-transform);
+}
+
+#habilidades {
+  background-image: var(--habilidades-background-image);
+  padding: 20px;
+  text-align: center;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.skills-column {
+  flex: 1;
+  text-align: left;
+  padding: 0 10px;
+}
+
+.skills-table-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.skills-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  border-spacing: 10px 0;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+
+}
+
+.skill {
+  width: 140px;
+}
+
+.skills-table td:hover {
+  background-color: var(--skills-table-hover-background-color);
+  transition: background-color 1s;
+  transform: rotateY(360deg);
+}
+
+.skills-table td {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid var(--skills-table-border-color);
+  background-color: var(--skills-table-td-background-color);
+  border: none;
+  border-radius: var(--skills-table-td-border-radius);
+  transition: transform 0.5s;
+  cursor: pointer;
+}
+
+
+.skills-table h3 {
+  color: var(--skills-table-h3-color);
+  margin-bottom: 10px;
+}
+
+.skill-circles {
+  display: flex;
+  align-items: center;
+}
+
+.skills-title {
+  font-size: 25px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--circle-background-color);
+  margin-right: 5px;
+}
+
+/* Estilo específicos para círculos coloreados */
+.circle[data-level="5"] {
+  background: var(--circle-level-5-background-color);
+}
+
+.skills-title {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+
+#habilidades:hover .skills-title,
+#habilidades:focus .skills-title {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#educacion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('images/casa.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20px;
+
+}
+
+.educacion-container {
+
+  font-size: 20px;
+  text-align: center;
+  margin-left: 30px;
+  transform: translateX(75%);
+}
+
+
+.card {
+  width: 400px;
+  height: 250px;
+  border-radius: 15px;
+  margin-top: 20px;
+  margin-left: auto;
+  overflow: hidden;
+  transition: width 0.5s, background-image 0.5s;
+  background-image: url('images/estudios.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card:nth-child(3) {
+  background-image: url('images/idiomas.jpg');
+}
+
+.card p {
+  margin: 10px 0;
+  color: var(--card-p-color);
+  opacity: 0;
+  transition: opacity 0.5s;
+  text-align: center;
+  margin-top: auto;
+}
+
+.card:hover {
+ 
+  background-image: var(--card-hover-background-image);
+}
+
+.card:hover p {
+  opacity: 1;
+}
+
+
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--footer-text-color);
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
+
+footer ul {
+  list-style-type: none;
+  /* Elimina los marcadores de lista */
+  padding: 0;
+  /* Elimina el relleno predeterminado */
+}
+
+footer li {
+  display: inline;
+  /* Hace que los elementos de la lista se dispongan en línea */
+  margin-right: 10px;
+  /* Añade un poco de espacio entre los elementos de la lista */
+}
+
+footer a {
+  text-decoration: none;
+  /* Elimina la subrayado del enlace */
+  color: inherit;
+  /* Hace que el enlace herede el color del texto circundante */
+}
+
+footer a:hover {
+  text-decoration: underline;
+  /* Opcional: Añade subrayado al pasar el ratón sobre el enlace */
+}
+
+
+button.hamburger-menu {
+  background: none;
+  border: none;
+  display: none;
+  /* Escondemos el botón por defecto */
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Estilos del botón hamburguesa */
+button.hamburger-menu svg {
+  stroke: var(--nav-link-color);
+}
+
+/* Media queries para la responsividad */
+@media screen and (max-width: 768px) {
+
+  header {
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    animation: adjust-header linear both;
+    animation-timeline: scroll();
+    animation-range: 0 100px;
+  
+  }
+  
+  @keyframes adjust-header {
+    to {
+      background: rgba(0, 0, 0, .3);
+      font-size: 16px;
+      height: 60px;
+      border-radius: 0;
+    }
+  }
+
+  .logo {
+    max-width: 30%;
+    max-height: 30%;
+    margin-top: 10px;
+  }
+
+  nav ul {
+    display: none;
+    /* Escondemos la barra de navegación en pantallas pequeñas */
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--header-background-color);
+  }
+
+  nav ul.active {
+    display: flex;
+    position: absolute;
+    z-index: -1;
+    margin-top: 432px;
+    right: 0;
+    max-width: 200px;
+    align-items: center;
+    /* Mostramos la barra de navegación cuando está activa */
+  }
+  nav ul.active >li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  button.hamburger-menu {
+    display: block;
+    /* Mostramos el botón hamburguesa en pantallas pequeñas */
+  }
+
+
+  #main-content {
+    display: block;
+    /* Cambia de grid a bloque */
+  }
+
+  .sobre-mi-container {
+    flex-direction: column;
+    /* Cambia la dirección del flexbox a columna */
+    align-items: center;
+  }
+
+  .texto-izquierda {
+    max-width: 100%;
+    /* Ocupa todo el ancho disponible */
+    text-align: center;
+  }
+
+  .foto-derecha{
+    margin-left: 5rem;
+  }
+
+  #experiencia {
+    padding: 10px;
+    /* Reducir el padding para dispositivos móviles */
+  }
+
+  table {
+    display: block;
+    /* Cambiar a bloque para que el ancho sea 100% */
+  }
+
+  .experiencia-card {
+    width: 100%;
+    /* Ocupar todo el ancho disponible */
+    margin: 10px 0;
+    /* Espacio entre las tarjetas */
+    display: flex;
+    /* Utilizar flexbox */
+    flex-direction: column;
+    /* Apilar las tarjetas verticalmente */
+    align-items: center;
+    /* Centrar horizontalmente */
+  }
+  #habilidades {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .skills-container {
+    flex-direction: column;
+    /* Cambiar a disposición en columna */
+    align-items: center;
+    /* Centrar elementos horizontalmente */
+  }
+
+  .skills-column {
+    width: 100%;
+    /* Ocupar todo el ancho disponible */
+    padding: 0;
+    /* Eliminar el padding lateral */
+    margin-bottom: 20px;
+    /* Espacio entre las columnas */
+  }
+
+  .skills-table-container {
+    margin-bottom: 20px;
+    
+    /* Espacio entre las tablas */
+  }
+
+  #habilidades .skills-title {
+    opacity: 1; /* Asegurar que el título sea visible */
+    transform: translateY(0); /* Asegurar que el título esté en su posición original */
+    transition: opacity 0.5s, transform 0.5s; /* Mantener la transición original */
+    margin-bottom: 10px; /* Espacio inferior para separarlo de las tablas */
+  }
+  .educacion-titulo {
+    background-color: var(--card-p-color);
+    border-radius: 20px;
+    margin: 0 auto;
+  }
+  .educacion-container {
+    font-size: 20px;
+    color: var(--footer-text-color);
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    transform: none;
+    margin-top: 20px;
+  }
+
+
+
+  .card {
+    width: calc(100% - 60px); /* Ancho total menos el doble del margen izquierdo */
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px; /* Espacio entre las tarjetas */
+  }
+
+  .card:hover {
+    background-color: var(--footer-text-color);
+  
+  }
+
+}
